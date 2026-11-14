@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CHICKATANA – fresh, high-quality and affordable chicken products in Sibonga, Cebu. Chicken Poppers, Mocktails, Whole Dressed Chicken and more.">
+  <title>Chickatana | Every Deal is Worth Clucking About</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🐔</span>
+        <span class="logo-text">CHICKATANA<small>FRIED CHICKEN</small></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Our Menu</a></li>
+        <li><a href="#products">Other Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="cart-btn" id="cartOpen" aria-label="Open order list">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-container container">
+      <div class="hero-copy">
+        <h1 class="headline">
+          <span class="top-line">Taste The</span>
+          <span class="main-line">Crunch</span>
+          <span class="brand-line">With Chickatana</span>
+        </h1>
+        <p class="tagline">Every Deal is Worth Clucking About.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn">Order Now <span class="arrow">→</span></a>
+          <a href="#products" class="btn btn-outline">Fresh Chicken</a>
+        </div>
+      </div>
+      <div class="hero-food">
+        <div class="food-note"><span>CRISPY</span><br>JUICY<br>REFRESHING</div>
+        <img src="images/home-banner.jpg" alt="Chickatana Chicken Poppers bucket with Soul Tide and Summer Fling mocktails">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features">
+    <div class="features-container container">
+      <div class="feature"><div class="feature-icon">🍗</div><div class="feature-text">Fresh &amp;<br>High Quality</div></div>
+      <div class="feature"><div class="feature-icon">💰</div><div class="feature-text">Affordable<br>Prices</div></div>
+      <div class="feature"><div class="feature-icon">👨‍👩‍👧</div><div class="feature-text">For Families<br>&amp; Students</div></div>
+      <div class="feature"><div class="feature-icon">♡</div><div class="feature-text">Customer<br>Satisfaction</div></div>
+    </div>
+  </section>
+
+  <!-- ================= OUR MENU ================= -->
+  <section class="section section-dark" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Our Menu</p>
+        <h2>Crispy Bites &amp; Signature Mocktails</h2>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Chicken Poppers -->
+        <article class="menu-card">
+          <div class="card-img"><img src="images/chicken-poppers.png" alt="Chicken Poppers"></div>
+          <div class="card-body">
+            <span class="badge">Snack</span>
+            <h3>Chicken Poppers</h3>
+            <p>Crispy, juicy Chicken Poppers – the perfect snack or meal.</p>
+            <label class="select-label" for="sauceSelect">Choose your sauce</label>
+            <select id="sauceSelect" class="select">
+              <option>Cheese</option>
+              <option>Cheesy Jalapeño</option>
+              <option>Barbecue</option>
+            </select>
+            <button class="btn btn-sm add-btn" data-item="Chicken Poppers" data-sauce="#sauceSelect">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- Soul Tide -->
+        <article class="menu-card">
+          <div class="card-img"><img src="images/soul-tide.png" alt="Soul Tide mocktail"></div>
+          <div class="card-body">
+            <span class="badge badge-blue">Mocktail</span>
+            <h3>Soul Tide</h3>
+            <p>Gatorade, Sprite, &amp; Lychee/Strawberry Mogu-Mogu.</p>
+            <button class="btn btn-sm add-btn" data-item="Soul Tide (Mocktail)">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- Summer Fling -->
+        <article class="menu-card">
+          <div class="card-img"><img src="images/summer-fling.png" alt="Summer Fling mocktail"></div>
+          <div class="card-body">
+            <span class="badge badge-yellow">Mocktail</span>
+            <h3>Summer Fling</h3>
+            <p>Tropicana, Sprite, &amp; Yakult.</p>
+            <button class="btn btn-sm add-btn" data-item="Summer Fling (Mocktail)">Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OTHER PRODUCTS ================= -->
+  <section class="section section-light" id="products">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Other Products</p>
+        <h2>Fresh Chicken For Every Kitchen</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="whole">Whole &amp; Meals</button>
+        <button class="chip" data-filter="parts">Chicken Parts</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-cat="whole">
+          <img src="images/whole-dressed-chicken.png" alt="Whole Dressed Chicken">
+          <h3>Whole Dressed Chicken</h3>
+          <p>Fresh, hygienically prepared – great taste, nutrition and value for households and food businesses.</p>
+          <button class="btn btn-sm add-btn" data-item="Whole Dressed Chicken">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="whole">
+          <div class="placeholder">🍚</div>
+          <h3>Soy Chicken (Rice Meal)</h3>
+          <p>Savory soy chicken served with rice for a delicious and satisfying meal.</p>
+          <button class="btn btn-sm add-btn" data-item="Soy Chicken Rice Meal">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="parts">
+          <img src="images/buchi.png" alt="Chicken Buchi">
+          <h3>Buchi</h3>
+          <p>Fresh chicken buchi, packed with flavor and perfect for everyday cooking.</p>
+          <button class="btn btn-sm add-btn" data-item="Buchi">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="parts">
+          <img src="images/intestines.png" alt="Chicken Intestines">
+          <h3>Intestines</h3>
+          <p>Fresh, versatile and ideal for a variety of delicious recipes.</p>
+          <button class="btn btn-sm add-btn" data-item="Intestines">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="parts">
+          <img src="images/chicken-head.png" alt="Chicken Head">
+          <h3>Chicken Head</h3>
+          <p>Fresh chicken heads, perfect for hearty and flavorful dishes.</p>
+          <button class="btn btn-sm add-btn" data-item="Chicken Head">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="parts">
+          <div class="placeholder">🫀</div>
+          <h3>Gizzard</h3>
+          <p>Fresh chicken gizzard, rich in flavor and perfect for everyday cooking.</p>
+          <button class="btn btn-sm add-btn" data-item="Gizzard">Add to Order</button>
+        </article>
+
+        <article class="product-card" data-cat="parts">
+          <div class="placeholder">🍖</div>
+          <h3>Liver</h3>
+          <p>Fresh, flavorful and nutritious chicken liver for your favorite dishes.</p>
+          <button class="btn btn-sm add-btn" data-item="Liver">Add to Order</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section section-dark" id="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">About Us</p>
+        <h2>Quality Chicken. Fair Prices. Happy Customers.</h2>
+        <p class="lead">
+          CHICKATANA is a food business that offers fresh, high-quality, and affordable chicken products
+          to meet the needs of families, students, and budget-conscious consumers.
+        </p>
+        <p>
+          Our product line includes Whole Dressed Chicken, Chicken Cuts, Chicken Poppers, Soy Chicken Rice Meals,
+          and refreshing Mocktails. We combine quality ingredients, delicious flavors, and competitive pricing
+          to deliver a convenient and enjoyable dining experience.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><strong>Fresh</strong><span>Hygienically prepared</span></div>
+        <div class="stat"><strong>Affordable</strong><span>Budget-friendly deals</span></div>
+        <div class="stat"><strong>Flavorful</strong><span>3 signature sauces</span></div>
+        <div class="stat"><strong>Refreshing</strong><span>2 signature mocktails</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOCATION ================= -->
+  <section class="section section-light" id="location">
+    <div class="container location-grid">
+      <div>
+        <p class="eyebrow">Find Us</p>
+        <h2>Visit Chickatana</h2>
+        <p class="lead">📍 Barangay Magcagong, Sibonga, Cebu, Philippines</p>
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Magcagong+Sibonga+Cebu+Philippines">Get Directions →</a>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Chickatana location map" loading="lazy"
+          src="https://maps.google.com/maps?q=Magcagong,%20Sibonga,%20Cebu,%20Philippines&z=14&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Order or Inquire</h2>
+        <ul class="contact-list">
+          <li>📱 <a href="tel:09151500548">0915-150-0548</a> / <a href="tel:09917308110">0991-730-8110</a></li>
+          <li>✉️ <a href="mailto:chickatana@gmail.com">chickatana@gmail.com</a></li>
+          <li>📘 <a href="https://www.facebook.com/search/top?q=chickatana%20cebu" target="_blank" rel="noopener">Chickatana Cebu</a></li>
+          <li>📸 <a href="https://www.instagram.com/chickatana" target="_blank" rel="noopener">@chickatana</a></li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="cName" placeholder="Your name" required>
+        <input type="tel" id="cPhone" placeholder="Mobile number" required>
+        <textarea id="cMsg" rows="4" placeholder="Your message or order details" required></textarea>
+        <button type="submit" class="btn">Send via Email →</button>
+        <p class="form-note">Opens your email app with the message pre-filled.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo-text">CHICKATANA</span>
+      <p>Every Deal is Worth Clucking About.</p>
+      <p>&copy; <span id="year"></span> Chickatana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= ORDER DRAWER ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Order list">
+    <div class="cart-head">
+      <h3>Your Order</h3>
+      <button class="close-btn" id="cartClose" aria-label="Close">✕</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <p class="cart-empty" id="cartEmpty">No items yet. Add something tasty!</p>
+    <div class="cart-actions">
+      <input type="text" id="oName" placeholder="Your name">
+      <input type="text" id="oAddress" placeholder="Pickup / delivery address">
+      <button class="btn" id="sendSms">Send Order via SMS</button>
+      <button class="btn btn-outline" id="sendEmail">Send Order via Email</button>
+      <button class="link-btn" id="clearCart">Clear order</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
