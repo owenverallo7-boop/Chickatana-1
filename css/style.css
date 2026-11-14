@@ -9,6 +9,7 @@
   --dark-2: #241107;
   --cream: #f8f5ee;
   --ink: #17110d;
+  --fb-blue: #1877f2;
   --radius: 18px;
 }
 
@@ -18,6 +19,14 @@ body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; background: var(--
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .container { width: min(92%, 1300px); margin: auto; }
+
+/* Keyboard-only focus ring (no box after mouse clicks) */
+a:focus { outline: none; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -91,7 +100,7 @@ img { max-width: 100%; display: block; }
 
 .hero-food { position: relative; display: flex; justify-content: center; }
 .hero-food img {
-  width: 100%; max-width: 560px; mix-blend-mode: lighten; /* blends black banner bg into hero */
+  width: 100%; max-width: 560px; mix-blend-mode: lighten;
   filter: drop-shadow(0 30px 30px rgba(0,0,0,.45));
   animation: float 5s ease-in-out infinite;
 }
@@ -171,7 +180,21 @@ h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.05; text-transform: upper
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .contact-list { list-style: none; margin-top: 25px; display: grid; gap: 16px; font-size: 18px; }
+.contact-list li { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.contact-list a { transition: color .2s; }
 .contact-list a:hover { color: var(--yellow); }
+
+/* Social icons */
+.social-icon { font-size: 26px; width: 30px; text-align: center; flex-shrink: 0; }
+.social-icon.fb { color: var(--fb-blue); }
+.social-icon.ig {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .contact-form, .cart-actions { display: grid; gap: 14px; }
 input, textarea {
   width: 100%; padding: 15px 18px; border-radius: 12px; border: 2px solid rgba(255,255,255,.12);
@@ -248,4 +271,5 @@ input:focus, textarea:focus, .select:focus { outline: none; border-color: var(--
   .feature { max-width: 280px; margin: auto; width: 100%; }
   .logo-text { font-size: 19px; }
   .headline { letter-spacing: -2px; }
+  .contact-list { font-size: 16px; }
 }
